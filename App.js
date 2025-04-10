@@ -35,7 +35,7 @@ function HomeStackScreen() {
 export default function App({navigate}) {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{ tabBarInactiveTintColor: '#B0B0B0', tabBarActiveTintColor: '#004080', headerStyle: { backgroundColor: '#F5F5F5' } }}>
         <Tab.Screen 
           name="Home" 
           component={HomeStackScreen} 
@@ -43,19 +43,26 @@ export default function App({navigate}) {
             headerShown: false,
             tabBarIcon: () => <Ionicons name="home-outline" size={24} />,
           }} 
+          
         />
         <Tab.Screen 
           name="Voting" 
           component={VotingScreen} 
           options={{
             tabBarIcon: () => <Ionicons name="checkmark-circle-outline" size={24} />,
+            headerStyle: {
+              backgroundColor: '#F5F5F5',
+            },
           }} 
         />
         <Tab.Screen 
           name="Settings" 
           component={SettingsScreen} 
           options={{
-            tabBarIcon: () => <Ionicons name="settings-outline" size={24} />,
+            tabBarIcon: () => <Ionicons name="settings-outline" size={24} />, headerStyle: {
+              backgroundColor: '#F5F5F5',
+            },
+            
           }} 
         />
       </Tab.Navigator>

@@ -45,7 +45,7 @@ export default function HomeScreen({ navigation }) {
   };
 
   return (
-    <ScrollView style={{ backgroundColor: "#F5F5F5" }} contentContainerStyle={{ paddingBottom: 10 }}>
+    <ScrollView style={{ backgroundColor: "#F5F5F5" }} contentContainerStyle={{ paddingBottom: 10 }} showsVerticalScrollIndicator={false}>
       {/* Header Section */}
       <View>
         <View
